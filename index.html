@@ -67,6 +67,14 @@ button:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
 .btn-ghost:hover{ background:rgba(255,255,255,.08); }
 .btn-sm{ padding:9px 16px; font-size:.85rem; }
 
+/* ---------- pulse (v1.4) ---------- */
+@keyframes btn-pulse{
+  0%{ box-shadow:4px 4px 0 var(--ink), 0 0 0 0 rgba(217,164,65,.55); }
+  70%{ box-shadow:4px 4px 0 var(--ink), 0 0 0 12px rgba(217,164,65,0); }
+  100%{ box-shadow:4px 4px 0 var(--ink), 0 0 0 0 rgba(217,164,65,0); }
+}
+.btn-pulse{ animation: btn-pulse 2s ease-out infinite; }
+
 /* ---------- how to play ---------- */
 #screen-howto{ background:var(--indigo-dark); align-items:stretch; text-align:left; }
 #screen-howto h2{ font-family:var(--font-display); text-align:center; margin:0 0 16px; color:var(--mustard); }
@@ -162,7 +170,7 @@ button:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
       <div><b id="menuLevel">1</b><span>Level Reached</span></div>
     </div>
     <div class="menu-btns">
-      <button class="btn" id="btnPlay">▶ Play</button>
+      <button class="btn btn-pulse" id="btnPlay">▶ Play</button>
       <button class="btn btn-ghost" id="btnHowto">How to Play</button>
       <button class="btn btn-ghost btn-sm" id="btnResetHigh">Reset High Score</button>
     </div>
