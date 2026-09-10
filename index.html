@@ -48,6 +48,9 @@ button:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
 #screen-menu{ background: radial-gradient(ellipse at 25% 0%, rgba(217,164,65,.28), transparent 55%), linear-gradient(180deg, var(--indigo), var(--indigo-dark)); }
 .logo-tamil{ font-family:var(--font-display); font-weight:800; font-size:clamp(2rem,6.5vw,2.9rem); color:var(--mustard); margin:0; line-height:1; }
 .logo-en{ font-weight:700; letter-spacing:.22em; text-transform:uppercase; font-size:.76rem; color:var(--chalk-dim); margin:8px 0 20px; }
+
+/* ---------- version badge (v1.5) ---------- */
+.version-tag{ position:absolute; bottom:10px; right:14px; font-size:.65rem; color:var(--chalk-dim); letter-spacing:.05em; opacity:.7; }
 .menu-scene{ width:min(100%, 300px); margin-bottom:6px; }
 
 .mode-row{ display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap; justify-content:center; }
@@ -158,6 +161,7 @@ button:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
     </svg>
     <h1 class="logo-tamil">கிட்டிப்புள்ளு</h1>
     <p class="logo-en">Gilli Danda</p>
+    <span class="version-tag">v1.5</span>
 
     <div class="mode-row" id="modeRow">
       <div class="mode-card selected" data-mode="solo"><b>Solo Practice</b><span>Chase your best distance, level up</span></div>
