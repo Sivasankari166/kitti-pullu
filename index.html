@@ -164,6 +164,7 @@ button:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
     <div class="menu-btns">
       <button class="btn" id="btnPlay">▶ Play</button>
       <button class="btn btn-ghost" id="btnHowto">How to Play</button>
+      <button class="btn btn-ghost btn-sm" id="btnResetHigh">Reset High Score</button>
     </div>
   </div>
 
@@ -870,6 +871,14 @@ button:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
     startSideTurn(0);
   });
   document.getElementById('btnHowto').addEventListener('click', () => showScreen('howto'));
+  document.getElementById('btnResetHigh').addEventListener('click', () => {
+    if (confirm('Reset your best distance and level back to zero?')){
+      sessionHigh = 0;
+      bestLevelReached = 1;
+      menuHigh.textContent = '0 m';
+      menuLevel.textContent = '1';
+    }
+  });
   document.getElementById('btnHowtoBack').addEventListener('click', () => showScreen('menu'));
   document.getElementById('btnQuit').addEventListener('click', () => { phase = PHASE.IDLE; handoff.classList.add('hidden'); showScreen('menu'); });
 
